@@ -12,3 +12,20 @@ header {
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
 }
+
+header input {
+    width: 100%;
+    height: 5rem;
+    float: left;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: .5rem;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+
+    -webkit-appearance: none;
+    -mo-appearance: none;
+    -ms--appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
