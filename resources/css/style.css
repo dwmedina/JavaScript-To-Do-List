@@ -97,7 +97,12 @@ header button svg .fill {
     
 }
 
-,container
+.container{
+width: 100%;
+    float: left;
+    padding: 1.5rem;
+    
+}
 
 ul.todo{
 width: 100%;
@@ -111,13 +116,60 @@ float: left;
 height: 5rem;
     background: #fff;
     border-radius: 0.5rem;
+    position: relative;
     box-shadow: 0 0.1rem 0.2rem rgba(44,62,80,0.1);
-   
+   margin: 0 0 1rem 0;
+    padding: 0 10rem 0 0;
+    
+}
+
+
+ul.todoli:last-child{
+margin: 0;
+
+}
+
+
+ul.todo li.buttons {
+    width: 10rem;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
 }
 
 
 
+ul.todo li.buttons button {
+    width: 5rem;
+    height: 5rem;
+    float: left;
+    background: none;
+    position: relative;
+    border: 0rem;
+    box-shadow: none;
+    outline: none;
+     -webkit-appearance: none;
+    -mo-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none; 
+    
+}
 
+ul.todo li.buttons button: last-of-type:before {
+ content: '';
+    width: 0.1rem;
+    height: 3rem;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    background: #edf0f1;
+    
+    
+    
+}
 
 
 
