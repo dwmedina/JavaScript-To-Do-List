@@ -1,8 +1,16 @@
 @charset "UTF-8";
 
+body{
+background: #edf0f1;
+padding: 8rem 0 0 0;
+
+}
+
+
 body, input, button {
     font-family: 'Roboto', sans-serif;
 }
+
 
 header {
     width: 100%;
@@ -72,6 +80,7 @@ header button {
     border: 0px;
     box-shadow: none;
     outline: none;
+    cursor: pointer;
 }
 
 header button svg {
@@ -82,5 +91,48 @@ header button svg {
     left: 50%;
     margin: -0.8rem 0 0 -0.8rem;
 }
+
+header button svg .fill {
+    fill: #25b99a;
+    
+}
+
+,container
+
+ul.todo{
+width: 100%;
+float: left;
+   
+}
+
+ul.todo li{
+width: 100%;
+float: left;
+height: 5rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(44,62,80,0.1);
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
