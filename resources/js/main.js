@@ -23,9 +23,23 @@ document.querySelector('#item').addEventListener('keydown', function(e) {
     }
 });
 
+function renderTodoList() {
+    if (!data.todo.length && !data.completed.length) return;
+
+    for (var i = 0; i < data.todo.length; i++) {
+        var value = data.todo[i];
+        addItemToDOM(value);
+    }
+
+    for (var j = 0; j < data.todo.length; j++) {
+        var value = data.completed[j];
+        addItemToDOM(value, true);
+    }
+}
+
 // Adds a new item to the todo list
 function addItemToDOM (text, completed) {
-    var list = (completed) ? document.querySelector('#completed'):document.querySelector('#todo');
+    var list = (completed) ? document.querySelector('#completed') : document.querySelector('#todo');
     
     var item = document.createElement('li');
     item.innerText = text;
