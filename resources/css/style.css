@@ -41,17 +41,20 @@ header input {
     text-indent: 1.8rem;
     padding: 0 6em 0 0;
     background: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem 2.5rem 2.5rem 0.5rem;
+/*
     border-top-left-radius: .5rem;
     border-bottom-left-radius: .5rem;
     border-top-right-radius: 2.5rem;
     border-bottom-right-radius: 2.5rem;
     
+*/
     border: 0px;
     box-shadow: none;
     outline: none;
 
     -webkit-appearance: none;
-    -mo-appearance: none;
+    -moz-appearance: none;
     -ms-appearance: none;
     -o-appearance: none;
     appearance: none;
@@ -61,7 +64,7 @@ header input::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.75);
 }
 
-header input::-moz-input-placeholder {
+header input:-moz-input-placeholder {
     color: rgba(255, 255, 255, 0.75);
 }
 
@@ -69,7 +72,7 @@ header input::-moz-input-placeholder {
     color: rgba(255, 255, 255, 0.75);
 }
 
-header input::-ms-input-placeholder {
+header input:-ms-input-placeholder {
     color: rgba(255, 255, 255, 0.75);
 }
 
@@ -86,6 +89,9 @@ header button {
     box-shadow: none;
     outline: none;
     cursor: pointer;
+    
+      -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 header button svg {
@@ -130,6 +136,7 @@ min-height: 5rem;
     box-shadow: 0 0.1rem 0.2rem rgba(44,62,80,0.1);
    margin: 0 0 1rem 0;
     padding: 1.4rem 10rem 1.4rem 1.4rem;
+    word-break: break-word;
     
 }
 
@@ -151,7 +158,7 @@ ul.todo li.buttons {
 
 
 
-ul.todo li.buttons button {
+ul.todo li .buttons button {
     width: 5rem;
     height: 5rem;
     float: left;
@@ -160,6 +167,7 @@ ul.todo li.buttons button {
     border: 0rem;
     box-shadow: none;
     outline: none;
+    cursor: pointer;
      -webkit-appearance: none;
     -mo-appearance: none;
     -ms-appearance: none;
@@ -178,6 +186,20 @@ ul.todo li.buttons button: last-of-type:before {
     background: #edf0f1;    
 }
 
+
+ul.todo li .buttons button svg .fill {
+   -webkit-transition: fill 0.2s ease;
+           -moz-transition: fill 0.2s ease;
+   -ms-transition: fill 0.2s ease;
+   -0-transition: fill 0.2s ease;
+   transition: fill 0.2s ease;
+
+}
+ul.todo li .buttons button.hover svg .fill {
+    fill:#e85656;
+
+}
+
 ul.todo li .buttons button svg{
 width: 2.2rem;
     height: 2.2rem;
@@ -188,8 +210,16 @@ width: 2.2rem;
 
 }
 
+ul.todo li .buttons button.remove svg .fill {
+    fill:#c0cecb;
+    
+}
 
-
+/*we added extra step*/
+.remove {
+    width: 50px;
+    height: 50px;
+}
 
 
 
