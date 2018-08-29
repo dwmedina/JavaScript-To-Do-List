@@ -140,14 +140,20 @@ min-height: 5rem;
     
 }
 
-
-ul.todoli:last-child{
+ul.todoli:last-of-type {
 margin: 0;
 
 }
 
+/*
+ul.todoli:last-child{
+margin: 0;
 
-ul.todo li.buttons {
+}
+*/
+
+
+ul.todo li .buttons {
     width: 10rem;
     height: 5rem;
     position: absolute;
@@ -176,7 +182,7 @@ ul.todo li .buttons button {
     
 }
 
-ul.todo li.buttons button: last-of-type:before {
+ul.todo li .buttons button:last-of-type:before {
  content: '';
     width: 0.1rem;
     height: 3rem;
@@ -187,15 +193,26 @@ ul.todo li.buttons button: last-of-type:before {
 }
 
 
+
+ul.todo li .buttons button svg {
+width: 2.2rem;
+    height: 2.2rem;
+position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1.1rem 0 0 -1.1rem;
+
+}
+
 ul.todo li .buttons button svg .fill {
    -webkit-transition: fill 0.2s ease;
-           -moz-transition: fill 0.2s ease;
+ -moz-transition: fill 0.2s ease;
    -ms-transition: fill 0.2s ease;
    -0-transition: fill 0.2s ease;
    transition: fill 0.2s ease;
 
 }
-ul.todo li .buttons button.hover svg .fill {
+ul.todo li .buttons button.remove:hover svg .fill {
     fill:#e85656;
 
 }
