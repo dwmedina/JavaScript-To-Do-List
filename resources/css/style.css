@@ -232,13 +232,35 @@ ul.todo li .buttons button.remove svg .fill {
     
 }
 
+ul.todo li .buttons button.complete svg .fill {
+   border-radius: 1.1rem;
+    border: 0.15rem solid #25b99a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*we added extra step*/
 .remove {
     width: 50px;
     height: 50px;
 }
 
-
+.complete {
+    width: 50px;
+    height: 50px;
+}
 
 
 
