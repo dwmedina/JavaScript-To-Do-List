@@ -5,11 +5,3 @@ document.querySelector('#add').addEventListener('click',function() {
 var value = document.querySelector('#item').value;
     
 });
-
-//
-//document.getElementById('add').addEventListener('click', function() {
-//  var value = document.getElementById('item').value;
-//  if (value) {
-//    addItem(value);
-//  }
-//});
