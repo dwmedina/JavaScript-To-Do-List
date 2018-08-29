@@ -23,10 +23,9 @@ document.querySelector('#item').addEventListener('keydown', function(e) {
     }
 });
 
-// Add a new item to the todo list
-function addItemTodo(text) {
-    var list = document.querySelector('#todo');
-    
+// Adds a new item to the todo list
+function addItemToDOM (text, completed) {
+    var list = (completed) ? document.querySelector('#completed'):document.querySelector('#todo');
     
     var item = document.createElement('li');
     item.innerText = text;
@@ -38,13 +37,19 @@ function addItemTodo(text) {
     remove.classList.add('remove');
     remove.innerHTML = removeSVG;
 
+    // Add click event for removing the item
+    remove.addEventListener('click', removeItem);
+
     var complete = document.createElement('button');
     complete.classList.add('complete');
     complete.innerHTML = completeSVG;
+
+    // Add click event for removing the item
+    remove.addEventListener('click', removeItem);
 
     buttons.appendChild(remove);
     buttons.appendChild(complete);
     item.appendChild(buttons);
 
-    list.appendChild(item);
+    list.appendChild(item, list.childNodes[0]);
 }
