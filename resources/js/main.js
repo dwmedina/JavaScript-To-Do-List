@@ -9,10 +9,18 @@ var completeSVG = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:x
 
 renderTodoList();
 
-document.querySelector('#add').addEventListener('click',function() {
+document.querySelector('#add').addEventListener('click', function() {
 var value = document.querySelector('#item').value;
-if (value) addItemTodo(value);
-    
+if (value) {
+        addItem(value);
+    }
+});
+
+document.querySelector('#item').addEventListener('keydown', function(e) {
+    var value = this.value;
+    if ((e.code === 'Enter' || e.code === 'NumpadEnter') && value) {
+        addItem(value);
+    }
 });
 
 // Add a new item to the todo list
