@@ -24,7 +24,7 @@ document.querySelector('#item').addEventListener('keydown', function(e) {
     }
 });
 
-fucntion addItem (value) {
+function addItem (value) {
     addItemToDOM(value);
     document.querySelector('#item').value = '';
                            
