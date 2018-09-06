@@ -46,23 +46,26 @@ function renderTodoList() {
     }
 }
 
-fucntion dataObjectUpdated() {
-    localStorage.setItem('todoList',JSON.stringify(data));}
+function dataObjectUpdated() {
+    localStorage.setItem('todoList',JSON.stringify(data));
+}
 
-function removeItem(e) {
+function removeItem() {
     var item = this.parentNode.parentNode;
     var parent = item.parentNode;
-var id = parent.id;
+    var id = parent.id;
     var value = item.innerText;
     
     
     if (id ==='todo' ){
         data.todo.splice(data.todo.indexOf(value),1);
-    }else {
+    } else {
         
     data.completed.splice(data.completed.indexOf(value),1);
     }
-    dataObjectUpdted();
+
+    dataObjectUpdated();
+
     parent.removeChild(item);
 }
 
