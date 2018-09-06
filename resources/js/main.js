@@ -11,8 +11,8 @@ renderTodoList();
 //user clciked on the add button
 //if there is any text isnide the item field add that text to the todo list
 document.querySelector('#add').addEventListener('click', function() {
-var value = document.querySelector('#item').value;
-if (value) {
+    var value = document.querySelector('#item').value;
+    if (value) {
         addItem(value);
     }
 });
@@ -26,9 +26,9 @@ document.querySelector('#item').addEventListener('keydown', function(e) {
 
 fucntion addItem (value) {
     addItemToDOM(value);
-    document.querySelector('#item").value = '';
+    document.querySelector('#item').value = '';
                            
-data.todo.push(value);
+    data.todo.push(value);
     dataObjectUpdated();
 }
 
@@ -40,7 +40,7 @@ function renderTodoList() {
         addItemToDOM(value);
     }
 
-    for (var j = 0; j < data.todo.length; j++) {
+    for (var j = 0; j < data.completed.length; j++) {
         var value = data.completed[j];
         addItemToDOM(value, true);
     }
@@ -58,10 +58,9 @@ function removeItem() {
     
     
     if (id ==='todo' ){
-        data.todo.splice(data.todo.indexOf(value),1);
+        data.todo.splice(data.todo.indexOf(value), 1);
     } else {
-        
-    data.completed.splice(data.completed.indexOf(value),1);
+        data.completed.splice(data.completed.indexOf(value), 1);
     }
 
     dataObjectUpdated();
@@ -119,5 +118,5 @@ function addItemToDOM (text, completed) {
     buttons.appendChild(complete);
     item.appendChild(buttons);
 
-    list.appendChild(item, list.childNodes[0]);
+    list.insertBefore(item, list.childNodes[0]);
 }
