@@ -69,7 +69,7 @@ function removeItem() {
 }
 
 function completeItem() {
-    var item - this.parentNode.parentNode;
+    var item = this.parentNode.parentNode;
     var parent = item.parentNode;
     var id = parent.id;
     var value = item.innerText;
